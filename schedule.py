@@ -4,18 +4,6 @@ import time
 import numpy as np
 
 
-
-def mycov1(machine_resources,instance_info):
-    result=np.argsort(np.argsort(np.min(machine_resources[:,0:98],axis=1)))
-    machine_resources=machine_resources[:,0:98]
-    instance_info=instance_info[0:98]
-    result+=np.argsort(np.argsort(np.dot(machine_resources,instance_info.T)))
-    machine_resources=(machine_resources.T-np.mean(machine_resources,axis=1).T).T
-    instance_info=instance_info-np.mean(instance_info)
-    result+=np.argsort(np.argsort(np.dot(machine_resources,instance_info.T)))
-    return result
-
-
 def mycov(machine_resources,instance_info):
     machine_resources=machine_resources[:,0:98]
     instance_info=instance_info[0:98]
