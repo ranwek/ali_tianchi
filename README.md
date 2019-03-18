@@ -1,6 +1,5 @@
 # ali_tianchi
---code
-
---submit
-
---data
+/master
+  /code
+  /submit
+  /data
